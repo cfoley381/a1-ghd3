@@ -87,5 +87,9 @@ These are the only way to move from B to A territory.
 
 
 What I created: 
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/d731d4d8-f89c-43fb-a342-c5dd23307aef" />
-An Ice cream cone with a line and rectangle in the background.
+<img width="2940" height="1912" alt="Pasted Graphic 5" src="https://github.com/user-attachments/assets/1589dec3-94f3-49a0-84f2-9507a9860b37" />
+A person enjoying an Ice cream cone on a sunny day.
+Technical Achievements:
+I made functions for the stick figure.
+Design Achievements: 
+I made one cohesive deign that used the entire space. 
