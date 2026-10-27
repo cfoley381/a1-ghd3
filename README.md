@@ -85,3 +85,7 @@ Remember, it is up to *you* to define what constitutes a technical and design ac
 Be ambitious as these are designed to allow you to shape your learning.
 These are the only way to move from B to A territory.
 
+
+What I created: 
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/d731d4d8-f89c-43fb-a342-c5dd23307aef" />
+An Ice cream cone with a line and rectangle in the background.
