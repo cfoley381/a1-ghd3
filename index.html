@@ -11,39 +11,67 @@
     console.log("d3 version", d3.version); // test that d3 loaded
     const svg = d3.select("#container")
         .append("svg")
-        .attr("width", 1000)
-        .attr("height", 1000);
-
-    // Circle
-    svg.append("circle")
-        .attr("cx", 210)
-        .attr("cy", 150)
-        .attr("r", 110)
-        .attr("fill", "blue")
-        .attr("class", "circle");
+        .attr("width", 2000)
+        .attr("height", 1000)
+        .attr("fill", "lightblue");
 
     // Rectangle
-    svg.append("rect")
-        .attr("x", 500)
-        .attr("y", 700)
-        .attr("width", 200)
-        .attr("height", 100)
-        .attr("fill", "lightblue")
-        .attr("stroke", "green")
-        .attr("class", "rect");
+        function ground(x, y, height, color){
+            svg.append("rect")
+                .attr("x", x)
+                .attr("y", y)
+                .attr("width", 2000)
+                .attr("height", height)
+                .attr("fill", color)
+                .attr("class", "rect");
+        }
+        ground(0, 700, 100, "brown");
+        ground(0, 650, 50, "green");
+        ground(0, 0, 650, "lightblue");
+
+    // Circle
+    function head(x, y, r, color, underline){
+        svg.append("circle")
+            .attr("cx", x)
+            .attr("cy", y)
+            .attr("r", r)
+            .attr("fill", color)
+            .attr("stroke", underline)
+            .attr("stroke-width", 1.5)
+            .attr("class", "circle");
+    }
+    //head(210, 150, 110, "blue", "blue");
+    head(0, 0, 110, "yellow");
+
 
     // Add Lines
-    svg.append("line")
-        .attr("x1", 400)
-        .attr("y1", 400)
-        .attr("x2", 600)
-        .attr("y2", 600)
-        .attr("stroke", "green")
-        .attr("stroke-width", 2)
-        .attr("class", "line");
+    function arm(y1, y2, x1, x2){
+        svg.append("line")
+            .attr("x1", x1)
+            .attr("y1", y1)
+            .attr("x2", x2)
+            .attr("y2", y2)
+            .attr("stroke", "black")
+            .attr("stroke-width", 2)
+            .attr("class", "line");
+    }
+    function arms(y1, y2, x1, x2){
+        arm(y1, y2, x1, (x1 + x2));
+        arm(y1, y2, x1, (x1 - x2));
+    }
+    // Legs
+    arms(600, 650, 650, 10);
+    // Arms
+    arms(550, 600, 650, 10);
+    // Torso
+    arm(600, 550, 650, 650);
+    // Head
+    head(650, 520, 30, "transparent", "black");
+    head(660, 585, 10, "blue", "blue");
+
     // Add Polygons
     svg.append("polygon")
-        .attr("points", "320,510 300,210,123,234")
+        .attr("points", "650, 590, 670, 590, 660,610")
         .attr("fill", "brown")
         .attr("stroke-width", 2)
         .attr("class", "polygon");
